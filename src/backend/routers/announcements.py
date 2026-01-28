@@ -83,6 +83,8 @@ def create_announcement(message: str, expires_at: str, teacher_username: Optiona
     if expires_dt <= datetime.utcnow():
         raise HTTPException(status_code=400, detail="expires_at must be in the future")
 
+    if start_dt is not None and expires_dt <= start_dt:
+        raise HTTPException(status_code=400, detail="expires_at must be after start_date")
     doc = {
         "message": message,
         "start_date": start_dt,
