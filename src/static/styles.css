@@ -672,3 +672,33 @@ footer {
   padding: 15px;
   font-weight: bold;
 }
+
+.announcement-manager-item {
+  padding: 10px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  background: var(--surface);
+}
+
+.announcement-manager-item .ann-msg {
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.announcement-manager-item .ann-meta {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+#announcements-modal .modal-content {
+  max-width: 700px;
+}
+
+/* Make the top banner slightly elevated */
+.announcement-banner {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
